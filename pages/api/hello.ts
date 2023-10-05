@@ -11,7 +11,7 @@ export default function handler(
 ) {
   const {ernests} = req.query;
   if (Array.isArray(ernests) || !ernests) {
-    throw new Error("This is an array or undefined");
+    throw new Error("This is an array or undefineddd");
   }
 
   res.status(200).json({ name: ernests.toUpperCase() });
