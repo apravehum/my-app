@@ -9,5 +9,10 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: 'John Doe' })
+  const {ernests} = req.query;
+  if (Array.isArray(ernests) || !ernests) {
+    throw new Error("This is an array or undefined");
+  }
+
+  res.status(200).json({ name: ernests.toUpperCase() });
 }
