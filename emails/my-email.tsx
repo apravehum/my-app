@@ -13,8 +13,8 @@ const Email = ({}) => {
       <Button>
         Click me
       </Button>
-      { arr.map((name) => (
-        <h1>{name}</h1>
+      { arr.map((name, index) => (
+        <h1 key={index}>{name}</h1>
       ))}
     </Tailwind>
   );
