@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse } from 'next';
 import path from 'path';
 import fs from 'fs';
 import { PROJECT_ROOT } from '../../root';
@@ -11,6 +11,12 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+
+  // const html = render(<MyTemplate />, {
+  //   pretty: true,
+  // });
+  
+  // console.log(html);
 
   const templateName = req.query.name;
   const TEMPLATES_DIR = path.join(PROJECT_ROOT, 'emails');
