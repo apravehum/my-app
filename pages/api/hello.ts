@@ -22,6 +22,7 @@ export default function handler(
 
   const filePath = path.join(TEMPLATES_DIR, `${templateName}.html`);
   console.log(filePath);
+  console.log('testtesttest');
 
   if (fs.existsSync(filePath)) {
       const htmlContent = fs.readFileSync(filePath, 'utf-8');
