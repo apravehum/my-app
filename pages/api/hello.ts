@@ -2,7 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import path from 'path';
 import fs from 'fs';
-
+import { PROJECT_ROOT } from '../../root';
 // type Data = {
 //   name: string
 // }
@@ -13,7 +13,6 @@ export default function handler(
 ) {
 
   const templateName = req.query.name;
-  const PROJECT_ROOT = path.join(__dirname, '..', '..', '..', '..');
   const TEMPLATES_DIR = path.join(PROJECT_ROOT, 'emails');
 
   if (!templateName) {
