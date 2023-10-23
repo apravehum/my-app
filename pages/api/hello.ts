@@ -14,7 +14,7 @@ export default function handler(
 
   const templateName = req.query.name;
   const PROJECT_ROOT = path.join(__dirname, '..', '..', '..', '..');
-  const TEMPLATES_DIR = path.join(PROJECT_ROOT, 'public', 'emails');
+  const TEMPLATES_DIR = path.join(PROJECT_ROOT, 'emails');
 
   if (!templateName) {
       return res.status(400).send({ error: 'Template name is required.' });
